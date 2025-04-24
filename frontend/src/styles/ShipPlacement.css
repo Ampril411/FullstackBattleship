@@ -1,0 +1,129 @@
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    border: 1px solid grey;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+}
+
+
+.ships-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+    .placement-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .ships-container {
+        position: static;
+        transform: none;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .ship-preview {
+        flex: 0 0 auto;
+        min-width: 40px;
+    }
+
+    .rotate-btn {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.ship-preview {
+    background-color: rgb(79, 79, 83);
+    color: white;
+    text-align: center;
+    line-height: 10px;
+    font-weight: bold;
+    cursor: grab;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+
+/* 拖拽阴影 */
+.ship-shadow {
+    background-color: rgba(166, 166, 184, 0.3);
+}
+
+.ship::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.rotate-btn{
+    margin-top: 65px;
+  text-align: center;
+  padding: 8px 12px;
+  font-size: 1rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+

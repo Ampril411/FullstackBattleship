@@ -1,0 +1,31 @@
+/* NewGame.css */
+
+.game-id-header {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.2rem; /* 比默认 h2 小一点 */
+    color: #004080;
+  }
+  
+  .waiting-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+  }
+  
+  .game-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .board {
+    border: 2px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  

@@ -1,0 +1,270 @@
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Navigation bar styles */
+#navbar {
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  background-color: #004080;
+  color: white;
+  padding: 1rem 0;
+  z-index: 1000;
+}
+
+/* Main navigation container */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation title */
+.nav-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation links container */
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+/* Individual list items */
+.nav-links ul li {
+  position: relative;
+}
+
+/* Default link style */
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Link hover effect */
+.nav-links ul li a:hover {
+  background-color: #365881;
+}
+
+/* Button-style look for "Game" item */
+.game {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+.game2 {
+  padding: 5px;
+  font-size: 14px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown menu (initially hidden) */
+.dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: 150%;
+  left: 0;
+  background-color: #abb5be;
+  padding: 50px;
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 150px;
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Show dropdown via class toggle (JS-controlled) */
+.dropdown-menu.show {
+  display: block !important;
+}
+
+/* Dropdown list item spacing and size */
+.dropdown-menu li {
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Dropdown link style */
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
+/* Responsive styles for devices ≤ 768px */
+@media (max-width: 768px) {
+  .nav-links ul {
+    flex-direction: row; /* Keep links horizontal */
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-links ul li {
+    width: auto;
+  }
+
+  .nav-links ul li a {
+    padding: 10px 12px;
+    width: auto;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    width: auto;
+    text-align: left;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive styles for very small screens ≤ 600px */
+@media (max-width: 600px) {
+  main {
+    padding-top: 60px;
+  }
+
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .hero img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .start-btn {
+    width: 100%;
+  }
+}
+
+/* Main content spacing (avoids overlap with fixed navbar) */
+main {
+  padding-top: 80px;
+}
+
+/* Hero image styles */
+.hero img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+
+
+/* login&register */
+#auth-right {
+  position: absolute;
+  right: 20px;
+  top: 80%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+#auth-right li a {
+  font-size: 0.8rem;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#auth-right li a:hover {
+  background-color: #365881;
+}
+
+/* 登录状态下用户名显示 */
+.username-display {
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+  padding: 6px 12px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+/* 更紧凑的 Logout 下拉菜单 */
+.dropdown-logout {
+  background-color: #abb5be;
+  list-style: none;
+  border-radius: 4px;
+  padding: 4px 5px;
+  margin-top: 10px;
+  position: absolute;
+  top: 150%;
+  right: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 110px;
+  z-index: 999;
+
+}
+
+/* 显示 dropdown */
+.dropdown-logout.show {
+  display: block !important;
+}
+
+.dropdown-logout li {
+  padding: 0;
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  padding: 5px 6px;
+  font-size: 0.8rem;  /* 和用户名一致 */
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+  background-color: #365881;
+}
+
+
+

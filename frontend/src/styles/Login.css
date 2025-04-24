@@ -1,0 +1,68 @@
+/* 登录注册容器垂直居中 */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  /* 表单样式 */
+  .auth-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  /* 输入框样式 */
+  .auth-container input {
+    text-align: center;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  /* 按钮样式 */
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    transform: scale(0.95);
+    background-color: #002b5e;
+  }
+  
+  /* ✅ 错误提示：红色 */
+  .error {
+    min-height: 1.5rem; /* 始终占位 */
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* ✅ 成功提示：绿色 */
+  .success-message {
+    min-height: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* ✅ 没内容时隐藏但保留高度 */
+  .error:empty,
+  .success-message:empty {
+    visibility: hidden;
+  }
+  
