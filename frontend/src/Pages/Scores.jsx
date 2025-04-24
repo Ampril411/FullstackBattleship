@@ -1,4 +1,3 @@
-// src/Pages/Scores.jsx
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../Context/UserContext";
@@ -13,14 +12,14 @@ const Scores = () => {
     fetch("/api/scores", { credentials: "include" })
       .then(res => res.json())
       .then(data => {
-        console.log("✅ Scores API returned:", data);
+        console.log("Scores API returned:", data);
         if (data.success && Array.isArray(data.scores)) {
           setScores(data.scores);
         } else {
-          console.warn("❗ Unexpected API format:", data);
+          console.warn("Unexpected API format:", data);
         }
       })
-      .catch(err => console.error("❌ Failed to fetch scores:", err));
+      .catch(err => console.error("Failed to fetch scores:", err));
   }, []);
 
   return (
