@@ -35,11 +35,32 @@ const AllGames = () => {
     return <div className="loading">Loading games…</div>;
   }
 
+  const openGames = games.filter(g => g.status === "Open");
   const activeGames = games.filter(g => g.status === "Active");
   const completedGames = games.filter(g => g.status === "Completed");
 
   return (
     <main className="all-games-container">
+      <section className="games-section">
+        <h2>Open Games</h2>
+        {openGames.length === 0 ? (
+          <p>No open games right now.</p>
+        ) : (
+          <ul className="games-list">
+            {openGames.map(game => (
+              <li key={game.gameId} className="game-card">
+                <Link to={`/game/${game.gameId}`} className="game-link">
+                  {game.player1} (waiting for opponent)
+                </Link>
+                <div className="game-meta">
+                  Created at {new Date(game.createdAt).toLocaleString()}
+                </div>
+              </li>
+            ))}
+          </ul>
+        )}
+      </section>
+
       <section className="games-section">
         <h2>Active Games</h2>
         {activeGames.length === 0 ? (
