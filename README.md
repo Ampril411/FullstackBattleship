@@ -1,5 +1,5 @@
 # Fullstack Battleship Game
-
+Preview: https://battleship-3-0.onrender.com/#/
 This is a fullstack two-player Battleship game built using:
 - React (frontend)
 - Node.js + Express (backend)
