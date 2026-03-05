@@ -6,12 +6,12 @@ stages:
   - test
 
 build_job:
-  stage: build
-  script:
-    - echo "Build step"
+  - stage: build
+  - script:
+      - echo "Build step"
 
 test_job:
-  stage: test
-  script:
-    - echo "About to fail"
-    - exit 1
+  - stage: test
+  - script:
+      - echo "About to fail"
+      - exit 1
