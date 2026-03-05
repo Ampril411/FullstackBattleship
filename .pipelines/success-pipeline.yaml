@@ -7,10 +7,12 @@ stages:
 
 build_job:
   - stage: build
+  - image: ubuntu:latest
   - script:
       - echo "Build successful"
 
 test_job:
   - stage: test
+  - image: ubuntu:latest
   - script:
       - echo "Tests passed"
