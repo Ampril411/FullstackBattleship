@@ -2,14 +2,16 @@ pipeline:
   name: fail-pipeline
 
 stages:
-  - name: build
-    jobs:
-      - name: build-echo
-        steps:
-          - run: echo "Build step"
+  - build
+  - test
 
-  - name: test
-    jobs:
-      - name: test-fail
-        steps:
-          - run: exit 1
+build_job:
+  stage: build
+  script:
+    - echo "Build step"
+
+test_job:
+  stage: test
+  script:
+    - echo "About to fail"
+    - exit 1
