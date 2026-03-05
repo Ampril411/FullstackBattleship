@@ -6,11 +6,11 @@ stages:
   - test
 
 build_job:
-  stage: build
-  script:
-    - echo "Build successful"
+  - stage: build
+  - script:
+      - echo "Build successful"
 
 test_job:
-  stage: test
-  script:
-    - echo "Tests passed"
+  - stage: test
+  - script:
+      - echo "Tests passed"
