@@ -3,9 +3,13 @@ pipeline:
 
 stages:
   - name: build
-    steps:
-      - run: echo "Build step"
+    jobs:
+      - name: build-echo
+        steps:
+          - run: echo "Build step"
 
   - name: test
-    steps:
-      - run: exit 1
+    jobs:
+      - name: test-fail
+        steps:
+          - run: exit 1
