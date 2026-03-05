@@ -3,9 +3,13 @@ pipeline:
 
 stages:
   - name: build
-    steps:
-      - run: echo "Build successful"
+    jobs:
+      - name: build-echo
+        steps:
+          - run: echo "Build successful"
 
   - name: test
-    steps:
-      - run: echo "Tests passed"
+    jobs:
+      - name: test-echo
+        steps:
+          - run: echo "Tests passed"
