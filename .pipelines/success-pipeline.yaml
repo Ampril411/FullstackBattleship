@@ -1,0 +1,11 @@
+pipeline:
+  name: success-pipeline
+
+stages:
+  - name: build
+    steps:
+      - run: echo "Build successful"
+
+  - name: test
+    steps:
+      - run: echo "Tests passed"
