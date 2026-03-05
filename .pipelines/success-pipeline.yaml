@@ -2,14 +2,15 @@ pipeline:
   name: success-pipeline
 
 stages:
-  - name: build
-    jobs:
-      - name: build-echo
-        steps:
-          - run: echo "Build successful"
+  - build
+  - test
 
-  - name: test
-    jobs:
-      - name: test-echo
-        steps:
-          - run: echo "Tests passed"
+build_job:
+  stage: build
+  script:
+    - echo "Build successful"
+
+test_job:
+  stage: test
+  script:
+    - echo "Tests passed"
