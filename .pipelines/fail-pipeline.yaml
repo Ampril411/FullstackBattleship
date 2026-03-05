@@ -1,0 +1,11 @@
+pipeline:
+  name: fail-pipeline
+
+stages:
+  - name: build
+    steps:
+      - run: echo "Build step"
+
+  - name: test
+    steps:
+      - run: exit 1
