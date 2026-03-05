@@ -7,11 +7,13 @@ stages:
 
 build_job:
   - stage: build
+  - image: ubuntu:latest
   - script:
       - echo "Build step"
 
 test_job:
   - stage: test
+  - image: ubuntu:latest
   - script:
       - echo "About to fail"
       - exit 1
